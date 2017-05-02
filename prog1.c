@@ -1,13 +1,20 @@
 #include <stdio.h>
+#include <math.h>
 int main(){
-    int n,c,k;
+    unsigned int n,c,k,nombre,temp;
     printf("Entre un nb decimal\n");
     scanf("%d",&n);
+    nombre = 0;
+    //@ assert nombre==0;
     printf("en binaire:\n");
-    /*@ loop invariant c>=0 && c<=31;*/
     for(c=31;c>=0;c--){
         k=n>>c;
-        //@ assert k==1 || k==0;
+        //@ assert k==n>>c;
+        //@ assert k>=0;
+        temp = (k&1)*((int)pow(2,c));
+        //@ assert temp >=0;
+        nombre = nombre + temp;
+        //@ assert nombre>=0;
         if(k&1){
             printf("1");
         }
@@ -16,5 +23,6 @@ int main(){
         }
     }
     printf("\n");
+    //@ assert nombre==n;
     return 0;
 }

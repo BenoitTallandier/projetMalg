@@ -35,19 +35,18 @@ VARIABLES n, c, k, r, nombre, temp, pc
 vars == << n, c, k, r, nombre, temp, pc >>
 
 Init == (* Global variables *)
-        /\ n = defaultInitValue
+        /\ n = test
         /\ c = 15
-        /\ k = defaultInitValue
+        /\ k = 0
         /\ r = defaultInitValue
         /\ nombre = 0
         /\ temp = defaultInitValue
         /\ pc = "Lbl_1"
 
 Lbl_1 == /\ pc = "Lbl_1"
-         /\ n = test
          /\ temp' = test
          /\ pc' = "Lbl_2"
-         /\ UNCHANGED << c, k, r, nombre >>
+         /\ UNCHANGED << n, c, k, r, nombre >>
 
 Lbl_2 == /\ pc = "Lbl_2"
          /\ IF c >= 0
@@ -57,7 +56,7 @@ Lbl_2 == /\ pc = "Lbl_2"
                     /\ nombre' = nombre + temp'
                     /\ IF (k' = 1)
                           THEN /\ PrintT(<<"1">>)
-                               /\ n' = r
+                               /\ n' = r'
                           ELSE /\ PrintT(<<"0">>)
                                /\ n' = n
                     /\ c' = c - 1
@@ -71,10 +70,15 @@ Next == Lbl_1 \/ Lbl_2
 
 Spec == Init /\ [][Next]_vars
 
+Inv == (pc = "Done") => test = nombre
+Inv2 == (pc = "Lbl_2") => (k = 0 \/ k = 1)
+
+Invariant == Inv
+
 Termination == <>(pc = "Done")
 
 \* END TRANSLATION
 =============================================================================
 \* Modification History
-\* Last modified Wed May 03 11:50:26 CEST 2017 by t7
+\* Last modified Thu May 04 16:03:39 CEST 2017 by t7
 \* Created Wed May 03 10:36:04 CEST 2017 by t7

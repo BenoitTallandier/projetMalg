@@ -1,14 +1,24 @@
 #include<stdio.h>
-
+#include<limits.h>
+//@ requires x>=0 && x<=1290 && x*x*x<INT_MAX; 
 int p2(int x){
-    unsigned int z=0,v=0,w=1,t=3,u=0,u2=0;
+    int z=0,v=0,w=1,t=3,u=0,u2=0;
+    //@ assert x>=0 && x<=1290;
+    //@ assert w==1;
+    //@ assert u==0;
+    //@ assert v==0;
+    //@ assert z==0;
+    /*@ loop invariant u<=x && z==u*u*u;
+    @ loop assigns z,v,t,w,u; */
     while ( u < x ){
-        z=z+v+w;
+        z=z+v+w;        
         v=v+t ;
         t = t+6;
         w=w+3;
         u=u+1;
     }
+    //@ assert u==x;
+    //@ assert z==x*x*x;
     return ( z ) ;
 }
 

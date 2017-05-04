@@ -1,0 +1,34 @@
+------------------------------ MODULE prog3tla ------------------------------
+
+EXTENDS TLC,Naturals,Integers
+CONSTANT x
+
+(*
+--algorithm prog3tla
+{
+    variables z=0,v=0,w=1,t=3,u=0,u2=0;
+    {
+        while( u < x )
+        {
+            z:=z+v+w;
+            v:=v+t;
+            t:=t+6;
+            w:=w+3;
+            u:=u+1;
+        };
+        print<<"fin de la boucle while">>;
+        if (z=x*x*x)
+        {
+            print <<"z = x*x*x",z>>;
+        }else{
+            print<<"probleme">>;
+        }
+    }
+}
+*)
+
+
+=============================================================================
+\* Modification History
+\* Last modified Thu May 04 09:43:18 CEST 2017 by Stefy
+\* Created Thu May 04 09:33:05 CEST 2017 by Stefy

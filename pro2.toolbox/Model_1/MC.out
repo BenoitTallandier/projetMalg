@@ -1,18 +1,18 @@
 @!@!@STARTMSG 2262:0 @!@!@
-TLC2 Version 2.09 of 10 March 2017
+TLC2 Version 2.08 of 21 December 2015
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running in Model-Checking mode with 2 workers.
+Running in Model-Checking mode.
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
 @!@!@ENDMSG 2220 @!@!@
 Parsing file MC.tla
 Parsing file pro2.tla
-Parsing file /home/etudiants/tallandi6u/toolbox/plugins/org.lamport.tlatools_1.0.0.201704142137/tla2sany/StandardModules/TLC.tla
-Parsing file /home/etudiants/tallandi6u/toolbox/plugins/org.lamport.tlatools_1.0.0.201704142137/tla2sany/StandardModules/Integers.tla
-Parsing file /home/etudiants/tallandi6u/toolbox/plugins/org.lamport.tlatools_1.0.0.201704142137/tla2sany/StandardModules/Naturals.tla
-Parsing file /home/etudiants/tallandi6u/toolbox/plugins/org.lamport.tlatools_1.0.0.201704142137/tla2sany/StandardModules/Sequences.tla
+Parsing file /Users/Stefy/Documents/telecomNancy2A/MALG/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.201512230951/tla2sany/StandardModules/TLC.tla
+Parsing file /Users/Stefy/Documents/telecomNancy2A/MALG/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.201512230951/tla2sany/StandardModules/Integers.tla
+Parsing file /Users/Stefy/Documents/telecomNancy2A/MALG/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.201512230951/tla2sany/StandardModules/Naturals.tla
+Parsing file /Users/Stefy/Documents/telecomNancy2A/MALG/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.201512230951/tla2sany/StandardModules/Sequences.tla
 Semantic processing of module Naturals
 Semantic processing of module Sequences
 Semantic processing of module TLC
@@ -23,7 +23,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2017-05-04 09:38:12)
+Starting... (2017-05-05 16:19:40)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
@@ -31,109 +31,112 @@ Computing initial states...
 @!@!@STARTMSG 2190:0 @!@!@
 Finished computing initial states: 1 distinct state generated.
 @!@!@ENDMSG 2190 @!@!@
-@!@!@STARTMSG 1000:1 @!@!@
-TLC threw an unexpected exception.
-This was probably caused by an error in the spec or model.
-See the User Output or TLC Console for clues to what happened.
-The exception was a java.lang.RuntimeException
-: A non-function (a set of the form {e1, ... ,eN}) was applied as a function.
-line 70, col 53 to line 70, col 63 of module pro2
-@!@!@ENDMSG 1000 @!@!@
-@!@!@STARTMSG 2121:1 @!@!@
-The behavior up to this point is:
-@!@!@ENDMSG 2121 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-1: <Initial predicate>
-/\ significantDigit = 0
-/\ semiSorted = 0
-/\ array = {0, 1, 2, 10, 14, 92, 293, 303, 429, 480, 2999, 4021}
-/\ temp = 0
-/\ bucket = 0
-/\ pc = "Lbl_1"
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-2: <Action line 53, col 10 to line 56, col 59 of module pro2>
-/\ significantDigit = 1
-/\ semiSorted = 0
-/\ array = {0, 1, 2, 10, 14, 92, 293, 303, 429, 480, 2999, 4021}
-/\ temp = 0
-/\ bucket = 0
-/\ pc = "Lbl_2"
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-3: <Action line 58, col 10 to line 66, col 63 of module pro2>
-/\ significantDigit = 1
-/\ semiSorted = 0
-/\ array = {0, 1, 2, 10, 14, 92, 293, 303, 429, 480, 2999, 4021}
-/\ temp = 0
-/\ bucket = {0}
-/\ pc = "Lbl_3"
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2103:1 @!@!@
-The error occurred when TLC was evaluating the nested
-expressions at the following positions:
-0. Line 68, column 13 to line 68, column 24 in pro2
-1. Line 69, column 13 to line 75, column 39 in pro2
-2. Line 70, column 24 to line 70, column 146 in pro2
-3. Line 70, column 52 to line 70, column 89 in pro2
-4. Line 70, column 53 to line 70, column 85 in pro2
-5. Line 70, column 53 to line 70, column 63 in pro2
-
-
-@!@!@ENDMSG 2103 @!@!@
+8
+10
+4
+12
+10
+9
+2
+6
+2
+6
+4
+12
+5
+10
+8
+12
+5
+12
+12
+10
+12
+12
+8
+5
+8
+11
+7
+12
+12
+12
+8
+12
+12
+8
+12
+12
+12
+10
+12
+12
+12
+12
+12
+12
+12
+12
+11
+12
+<<10, 4021, 303, 2, 10, 303, 293, 303, 5, 2999, 4021, 10>>
+@!@!@STARTMSG 2193:0 @!@!@
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 1.1E-17
+  based on the actual fingerprints:  val = 1.1E-14
+@!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2017-05-04 09:38:13
+The coverage statistics at 2017-05-05 16:19:41
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 100, col 24 to line 100, col 73 of module pro2: 0
+  line 101, col 24 to line 101, col 73 of module pro2: 48
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 101, col 24 to line 101, col 37 of module pro2: 0
+  line 102, col 24 to line 102, col 37 of module pro2: 48
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 102, col 24 to line 102, col 36 of module pro2: 0
+  line 103, col 24 to line 103, col 36 of module pro2: 48
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 103, col 34 to line 103, col 49 of module pro2: 0
+  line 104, col 34 to line 104, col 49 of module pro2: 48
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 104, col 24 to line 104, col 62 of module pro2: 0
+  line 105, col 24 to line 105, col 62 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 105, col 24 to line 105, col 36 of module pro2: 0
+  line 106, col 24 to line 106, col 36 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 106, col 37 to line 106, col 41 of module pro2: 0
+  line 107, col 37 to line 107, col 41 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 106, col 44 to line 106, col 47 of module pro2: 0
+  line 107, col 44 to line 107, col 47 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 107, col 26 to line 107, col 35 of module pro2: 0
+  line 108, col 26 to line 108, col 35 of module pro2: 52
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 107, col 38 to line 107, col 43 of module pro2: 0
+  line 108, col 38 to line 108, col 43 of module pro2: 52
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 43, col 12 to line 43, col 21 of module pro2: 0
+  line 43, col 12 to line 43, col 21 of module pro2: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 43, col 24 to line 43, col 39 of module pro2: 0
+  line 43, col 24 to line 43, col 39 of module pro2: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 43, col 42 to line 43, col 46 of module pro2: 0
+  line 43, col 42 to line 43, col 46 of module pro2: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 43, col 49 to line 43, col 52 of module pro2: 0
+  line 43, col 49 to line 43, col 52 of module pro2: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 43, col 55 to line 43, col 60 of module pro2: 0
+  line 43, col 55 to line 43, col 60 of module pro2: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 43, col 63 to line 43, col 64 of module pro2: 0
+  line 43, col 63 to line 43, col 64 of module pro2: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 54, col 13 to line 54, col 33 of module pro2: 1
@@ -154,125 +157,125 @@ The coverage statistics at 2017-05-04 09:38:13
   line 56, col 51 to line 56, col 56 of module pro2: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 60, col 24 to line 60, col 54 of module pro2: 1
+  line 60, col 24 to line 60, col 52 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 61, col 24 to line 61, col 32 of module pro2: 1
+  line 61, col 24 to line 61, col 32 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 62, col 24 to line 62, col 36 of module pro2: 1
+  line 62, col 24 to line 62, col 36 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 64, col 24 to line 64, col 35 of module pro2: 0
+  line 64, col 24 to line 64, col 35 of module pro2: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 65, col 37 to line 65, col 40 of module pro2: 0
+  line 65, col 37 to line 65, col 40 of module pro2: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 65, col 43 to line 65, col 48 of module pro2: 0
+  line 65, col 43 to line 65, col 48 of module pro2: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 66, col 26 to line 66, col 35 of module pro2: 1
+  line 66, col 26 to line 66, col 35 of module pro2: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 66, col 38 to line 66, col 53 of module pro2: 1
+  line 66, col 38 to line 66, col 53 of module pro2: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 66, col 56 to line 66, col 60 of module pro2: 1
+  line 66, col 56 to line 66, col 60 of module pro2: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 70, col 24 to line 70, col 146 of module pro2: 0
+  line 70, col 24 to line 70, col 159 of module pro2: 48
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 71, col 24 to line 71, col 39 of module pro2: 0
+  line 71, col 24 to line 71, col 39 of module pro2: 48
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 72, col 24 to line 72, col 36 of module pro2: 0
+  line 72, col 24 to line 72, col 36 of module pro2: 48
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 73, col 24 to line 73, col 32 of module pro2: 0
+  line 73, col 24 to line 73, col 32 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 74, col 24 to line 74, col 36 of module pro2: 0
+  line 74, col 24 to line 74, col 36 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 75, col 34 to line 75, col 39 of module pro2: 0
+  line 75, col 34 to line 75, col 39 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 76, col 26 to line 76, col 35 of module pro2: 0
+  line 76, col 26 to line 76, col 35 of module pro2: 52
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 76, col 38 to line 76, col 53 of module pro2: 0
+  line 76, col 38 to line 76, col 53 of module pro2: 52
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 76, col 56 to line 76, col 60 of module pro2: 0
+  line 76, col 56 to line 76, col 60 of module pro2: 52
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 80, col 24 to line 80, col 88 of module pro2: 0
+  line 80, col 24 to line 80, col 88 of module pro2: 36
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 81, col 24 to line 81, col 37 of module pro2: 0
+  line 81, col 24 to line 81, col 37 of module pro2: 36
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 82, col 24 to line 82, col 36 of module pro2: 0
+  line 82, col 24 to line 82, col 36 of module pro2: 36
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 83, col 24 to line 83, col 37 of module pro2: 0
+  line 83, col 24 to line 83, col 35 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 84, col 24 to line 84, col 36 of module pro2: 0
+  line 84, col 24 to line 84, col 36 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 85, col 34 to line 85, col 39 of module pro2: 0
+  line 85, col 34 to line 85, col 39 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 86, col 26 to line 86, col 35 of module pro2: 0
+  line 86, col 26 to line 86, col 35 of module pro2: 40
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 86, col 38 to line 86, col 53 of module pro2: 0
+  line 86, col 38 to line 86, col 53 of module pro2: 40
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 86, col 56 to line 86, col 60 of module pro2: 0
+  line 86, col 56 to line 86, col 60 of module pro2: 40
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 90, col 24 to line 90, col 122 of module pro2: 0
+  line 91, col 24 to line 91, col 130 of module pro2: 48
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 91, col 24 to line 91, col 38 of module pro2: 0
+  line 92, col 24 to line 92, col 38 of module pro2: 48
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 92, col 24 to line 92, col 36 of module pro2: 0
+  line 93, col 24 to line 93, col 36 of module pro2: 48
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 93, col 24 to line 93, col 32 of module pro2: 0
+  line 94, col 24 to line 94, col 32 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 94, col 24 to line 94, col 36 of module pro2: 0
+  line 95, col 24 to line 95, col 36 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 95, col 34 to line 95, col 43 of module pro2: 0
+  line 96, col 34 to line 96, col 43 of module pro2: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 96, col 26 to line 96, col 41 of module pro2: 0
+  line 97, col 26 to line 97, col 41 of module pro2: 52
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 96, col 44 to line 96, col 48 of module pro2: 0
+  line 97, col 44 to line 97, col 48 of module pro2: 52
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 96, col 51 to line 96, col 56 of module pro2: 0
+  line 97, col 51 to line 97, col 56 of module pro2: 52
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(3) at 2017-05-04 09:38:13: 3 states generated (636 s/min), 3 distinct states found (636 ds/min), 0 states left on queue.
+Progress(203) at 2017-05-05 16:19:41: 204 states generated (37 090 s/min), 203 distinct states found (36 909 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-3 states generated, 3 distinct states found, 0 states left on queue.
+204 states generated, 203 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
-The depth of the complete state graph search is 3.
+The depth of the complete state graph search is 203.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 00s at (2017-05-04 09:38:13)
+Finished in 00s at (2017-05-05 16:19:41)
 @!@!@ENDMSG 2186 @!@!@

@@ -1,6 +1,4 @@
 #include<stdio.h>
-
-
 void printArray(int*array,int size){
     int i ;
     printf ( " [ " ) ;
@@ -17,47 +15,38 @@ int findLargestNum(int *array,int size){
     /*@ loop invariant \forall int k; 0 <= k < i ==> largestNum >= array[k];
     @ loop assigns i, largestNum;*/
     for(i=0;i<size;i++){
-        if ( array[i] > largestNum )
+        if ( array [ i ] > largestNum )
             largestNum = array [ i ] ;
     }
     //@ assert \forall int k; 0 <= k <= size-1 ==> largestNum >= array[k];
     return largestNum ;
 }
-/*@ 	requires size>0;*/
-//	ensures \forall int k; 1 <= k < size ==> *(array + (k - 1)) ≤ *(array + k);
+
+/*@ requires size>0 && size<=20;*/
 void radixSort(int * array,int size){
-    printf( " \n\nRunning Radix Sort on Unsorted List !\n\n " ) ;
+    printf( " \n\nRunning Radix Sort on Unsorted L i s t !\n\n " ) ;
+    // Base 10 i s used
     int i ;
-    int semiSorted [ 10 ];
-    unsigned int significantDigit = 0 ;
+    int semiSorted[size];
+    int significantDigit = 1 ;
     int largestNum = findLargestNum(array,size);
-    /* loop invariant \forall integer k2; 1 <= k2 < size ==> array[k2-1]%significantDigit <= array[k2]%significantDigit;*/
     while ( largestNum / significantDigit> 0 ) {
-        int bucket[10]={0};
-        
+        printf ( "Sorting : %d  place" , significantDigit) ;
+        printArray ( array , size ) ;
+        int bucket[10] = {0};
         for ( i = 0 ; i < size ; i ++)
             bucket [ ( array [ i ] / significantDigit) % 10]++;
-	printArray(bucket,10);
-        
+        /*@ loop invariant \forall integer k; 0 < k < i ==> bucket[k-1]<=bucket[k];*/
         for(i=1;i<10;i++)
             bucket[i]+=bucket[i-1];
-            
-        /*@ loop invariant \forall integer k; i < k < size ==> semiSorted[k-1] <= semiSorted[k]; */
         for(i=size-1;i>=0;i--)
-            semiSorted[ --bucket[ (array[i]/significantDigit)%10 ] ] = array[i];
-            
-	/*@ loop invariant \forall integer k; 0 <= k < i ==> array[k] == semiSorted[k] ;*/
+            semiSorted[--bucket[(array[i]/significantDigit)%10]] = array[i];
         for(i=0;i<size;i++)
             array [ i ] = semiSorted [ i ] ;
-        
-        // assert \forall integer k2; 1 <= k2 < size ==> (array[k2-1])%significantDigit <= (array[k2])%significantDigit;    
         significantDigit*=10;
-        //@ assert significantDigit >=0;
         printf( " \n\tBucket : " ) ;
         printArray ( bucket , 10 ) ;
-        
     }
-    // assert \forall integer k; 1 <= k < size ==> *(array + (k - 1)) ≤ *(array + k);
 }
 
 int main ( ) {

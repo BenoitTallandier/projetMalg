@@ -22,14 +22,16 @@ int findLargestNum(int *array,int size){
     return largestNum ;
 }
 
-/*@ requires size>0 && size<=20;*/
-void radixSort(int * array,int size){
+/*@ requires size>0 && size<=20;
+ensures \forall integer k; 0<k<size ==> \result[k-1]<=\result[k]*/
+int * radixSort(int * array,int size){
     printf( " \n\nRunning Radix Sort on Unsorted L i s t !\n\n " ) ;
     // Base 10 i s used
     int i ;
     int semiSorted[size];
     int significantDigit = 1 ;
     int largestNum = findLargestNum(array,size);
+    /*@ loop invariant \forall integer k; (0<k<size && significantDigit>=10) ==> (array[k-1]/(significantDigit/10))%10 <= (array[k]/(significantDigit/10)%10; */
     while ( largestNum / significantDigit> 0 ) {
         printf ( "Sorting : %d  place" , significantDigit) ;
         printArray ( array , size ) ;
@@ -39,14 +41,17 @@ void radixSort(int * array,int size){
         /*@ loop invariant \forall integer k; 0 < k < i ==> bucket[k-1]<=bucket[k];*/
         for(i=1;i<10;i++)
             bucket[i]+=bucket[i-1];
+        /*@ loop invariant \forall integer k; 0<k<size ==> (semiSorted[k-1]%significantDigit<=semiSorted[k]%significantDigit || semiSorted[k] == array[k] || semiSorted[k]<0);*/
         for(i=size-1;i>=0;i--)
             semiSorted[--bucket[(array[i]/significantDigit)%10]] = array[i];
+        /*@ loop invariant \forall integer k;0<=k<size ==> array[i] == semiSorted[i]; */
         for(i=0;i<size;i++)
             array [ i ] = semiSorted [ i ] ;
         significantDigit*=10;
         printf( " \n\tBucket : " ) ;
         printArray ( bucket , 10 ) ;
     }
+    return array;
 }
 
 int main ( ) {

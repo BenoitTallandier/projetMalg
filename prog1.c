@@ -7,14 +7,11 @@ int main(){
     nombre = 0;
     //@ assert nombre==0;
     printf("en binaire:\n");
+    //@ loop invariant \forall integer j; c <= j <= 31 ==> nombre>>j == n>>j;
     for(c=31;c>=0;c--){
         k=n>>c;
-        //@ assert k==n>>c;
-        //@ assert k>=0;
         temp = (k&1)*((int)pow(2,c));
-        //@ assert temp >=0;
         nombre = nombre + temp;
-        //@ assert nombre>=0;
         if(k&1){
             printf("1");
         }
